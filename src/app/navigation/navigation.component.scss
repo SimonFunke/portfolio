@@ -1,0 +1,31 @@
+@import './../../styles.scss';
+
+.nav-links {
+    @include display();
+    gap: 32px;
+    margin-bottom: 16px;
+
+    >span {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px; // Positionieren Sie die Linie unter dem Text
+            width: 0%; // Startbreite der Linie (unsichtbar)
+            height: 2px;
+            background-color: $hover-color;
+            transition: width 200ms ease; // Übergangseffekt für die Breite
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            color: $hover-color;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<div class="main-content">
+    <div class="main-content-colored-bg" [class.animate-shrink]="isActive">
+        <div class="main-content-container" [class.animate-fadeout]="isActive">
+            <div>
+                <img src="./../../assets/img/foto.png">
+                <div class="div-person">
+                    <span>
+                        < I'm Simon Funke >
+                    </span>
+                    <span>
+                        < Frontend Developer >
+                    </span>
+                </div>
+            </div>
+            <div (click)="goToAbout()" class="btn-arrow">
+                <img  src="./../../assets/icons/arrow-right.png">
+            </div>
+            <!-- <div class="btn-primary">
+                >
+            </div> -->
+            <div class="div-social">
+                <img src="./../../assets/icons/git.png">
+                <img src="./../../assets/icons/linkedIn.png">
+                <img src="./../../assets/icons/mail.png">
+            </div>
+        </div>
+    </div>
+</div>

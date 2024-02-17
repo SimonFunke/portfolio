@@ -1,0 +1,76 @@
+@import './../../styles.scss';
+
+app-navigation {
+    border-bottom: 2px solid white;
+}
+
+.div-outlet {
+    padding-top: 64px;
+    width: 100%;
+}
+.main-content {
+    background-color: $bg-color;
+    height: 100vh;
+    width: 100%;
+    @include display();
+}
+
+.main-content-colored-bg {
+    background-image: linear-gradient(#E80AC4, #57D79A, #65ABEC);
+    width: 72px;
+    height: 72px;
+    border-radius: 50px;
+    padding: 16px;
+    rotate: 0deg;
+    box-sizing: border-box;
+}
+
+.main-content-container {
+    width: 100%;
+    height: 100%;
+    background-color: #0F172A;
+    border-radius: 40px;
+    padding: 16px;
+    box-sizing: border-box;
+    font-size: 32px;
+    @include display($jc: flex-start);
+    flex-direction: column;
+    opacity: 0;
+}
+
+.animate-grow {
+    animation: grow 2000ms forwards;
+}
+
+@keyframes grow {
+    0% {
+        rotate: 0deg;
+    }
+
+    50% {
+        rotate: -360deg;
+        width: 30%;
+        height: 30vh;
+    }
+
+    100% {
+        width: 100%;
+        max-width: 1440px;
+        height: 100vh;
+        rotate: -360deg;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 2000ms forwards;
+}
+
+@keyframes fadeIn {
+    65% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
