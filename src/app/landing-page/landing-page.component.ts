@@ -15,10 +15,10 @@ export class LandingPageComponent {
   constructor(private router:Router) {
   }
 
-  goToAbout() {
+  goToAbout(page : string = 'about') {
     this.isActive = !this.isActive
      setTimeout(() => {
-      this.router.navigateByUrl('/intern/about');
+      this.router.navigateByUrl('/intern/' + page);
      },1000)
   }
 
