@@ -21,6 +21,7 @@ export class PortfolioComponent {
         name: 'El-Pollo-Loco',
         discription: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
         image: './../assets/img/el-pollo-loco.png',
+        components: ['html', 'css', 'js'],
       }
     );
 
@@ -29,6 +30,16 @@ export class PortfolioComponent {
         name: 'Join',
         discription: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
         image: './../assets/img/join.png',
+        components: ['html', 'css', 'js'],
+      }
+    );
+
+    this.projects.push(
+      {
+        name: 'El-Pollo-Loco',
+        discription: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+        image: './../assets/img/el-pollo-loco.png',
+        components: ['html', 'css', 'js'],
       }
     );
   }
