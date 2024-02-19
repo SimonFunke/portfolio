@@ -47,7 +47,20 @@ $hover-color: #58D4A0;
         cursor: pointer;
         background-color: $hover-color;
     }
-    >img {
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(101%) contrast(101%);
+    // >img {
+    //     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(101%) contrast(101%);
+    // }
+}
+
+.btn-secondary {
+    display: flex;
+    border-radius: 50px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    border: 1px solid $hover-color;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $hover-color;
     }
 }
