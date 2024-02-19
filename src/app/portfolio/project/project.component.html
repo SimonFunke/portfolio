@@ -5,8 +5,7 @@
         <div>
             <span>{{ project.discription }}</span>
             <div>
-                <img src="./../../../assets/icons/html.png">
-                <img src="./../../../assets/icons/css.png">
+                <img *ngFor="let component of project.components" [src]="getImageSrc(component)">
             </div>
         </div>
     </div>

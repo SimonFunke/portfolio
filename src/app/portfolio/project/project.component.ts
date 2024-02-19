@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Projects } from '../../shared/interfaces/projects';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
@@ -22,5 +23,8 @@ export class ProjectComponent {
     window.open('https://simon-funke.developerakademie.net/'+projectToLowerCase, '_blank');
   }
 
-}
+  getImageSrc(component:string){
+    return `./../../../assets/icons/${component}.png`;
+  }
 
+}
