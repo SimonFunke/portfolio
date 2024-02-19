@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Projects } from '../../shared/interfaces/projects';
+
 
 @Component({
   selector: 'app-project',
@@ -9,4 +11,8 @@ import { Component } from '@angular/core';
 })
 export class ProjectComponent {
 
+  @Input () project!: Projects;
+
 }
+
+
