@@ -25,3 +25,11 @@
         gap: 16px;
     }
 }
+
+.btn-primary {
+    @include display();
+    gap: 16px;
+    >img {
+        filter: none;
+    }
+}
