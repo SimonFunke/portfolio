@@ -1,18 +1,56 @@
 <div class="div-content-main">
     <h1>{{ title }}</h1>
-    <form>
-        <div class="div-input-field">
-            <input type="text" placeholder="Your name">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <div>
+            <div class="div-input-field"
+                [ngClass]="{'error-border': name.invalid && name.touched, 'valid-border': name.valid}">
+                <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
+                    placeholder="Your name" required>
+                @if(name.invalid && name.touched){
+                <img src="./../../assets/icons/error.png">
+                } 
+                @else if(name.valid && name.touched) {
+                    <img src="./../../assets/icons/ok.png">
+                }
+            </div>
+            @if(name.invalid && name.touched){
+            <span class="error">Please enter your name</span>
+            }
         </div>
-        <div class="div-input-field">
-            <input type="email" placeholder="Your email">
+        <div>
+            <div class="div-input-field" [ngClass]="{'error-border': email.invalid && email.touched, 'valid-border': email.valid}">
+                <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
+                    placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                @if(email.invalid && email.touched){
+                <img src="./../../assets/icons/error.png">
+                }
+                @else if(email.valid && email.touched) {
+                    <img src="./../../assets/icons/ok.png">
+                }
+            </div>
+            @if(email.invalid && email.touched){
+            <span class="error">Please enter your a valid email</span>
+            }
         </div>
-        <div class="div-text-area">
-            <textarea placeholder="Your message"></textarea>
+        <div>
+            <div class="div-text-area" [ngClass]="{'error-border': message.invalid && message.touched, 'valid-border': message.valid}">
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+                    placeholder="Your message" required></textarea>
+                @if(message.invalid && message.touched){
+                <img src="./../../assets/icons/error.png">
+                }
+                @else if(message.valid && message.touched) {
+                    <img src="./../../assets/icons/ok.png">
+                }
+            </div>
+            @if(message.invalid && message.touched){
+            <span class="error">Please enter your message</span>
+            }
         </div>
         <div>
             <img (click)="changeCheckboxImage()" [src]="checkboxImage">
             <span>I`ve read the privacy policy and agree to the processing of my data as outlined.</span>
         </div>
+        <input class="btn-submit" [class.btn-submit-enabled]="contactForm.valid && checked" type="submit" value="Send message">
     </form>
 </div>
