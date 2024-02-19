@@ -7,6 +7,7 @@ app-navigation {
 .div-outlet {
     padding-top: 64px;
     width: 100%;
+    overflow: hidden;
 }
 .main-content {
     background-color: $bg-color;
