@@ -18,7 +18,7 @@
 }
 
 .animate-shrink {
-    animation: shrink 1000ms forwards;
+    animation: shrink 500ms forwards;
 }
 
 .main-content-container {
@@ -48,7 +48,7 @@
 }
 
 .animate-fadeout {
-    animation: fadeOut 200ms forwards;
+    animation: fadeOut 100ms forwards;
 }
 
 @keyframes fadeOut {
