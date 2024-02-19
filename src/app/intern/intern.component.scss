@@ -41,7 +41,7 @@ app-navigation {
 }
 
 .animate-grow {
-    animation: grow 2000ms forwards;
+    animation: grow 1000ms forwards;
 }
 
 @keyframes grow {
@@ -64,7 +64,7 @@ app-navigation {
 }
 
 .animate-fadeIn {
-    animation: fadeIn 2000ms forwards;
+    animation: fadeIn 1000ms forwards;
 }
 
 @keyframes fadeIn {
