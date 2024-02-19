@@ -1,3 +1,18 @@
 <div class="div-content-main">
     <h1>{{ title }}</h1>
+    <form>
+        <div class="div-input-field">
+            <input type="text" placeholder="Your name">
+        </div>
+        <div class="div-input-field">
+            <input type="email" placeholder="Your email">
+        </div>
+        <div class="div-text-area">
+            <textarea placeholder="Your message"></textarea>
+        </div>
+        <div>
+            <img (click)="changeCheckboxImage()" [src]="checkboxImage">
+            <span>I`ve read the privacy policy and agree to the processing of my data as outlined.</span>
+        </div>
+    </form>
 </div>
