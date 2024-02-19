@@ -1,1 +1,7 @@
 @import './../../styles.scss';
+
+.project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
