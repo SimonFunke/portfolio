@@ -2,11 +2,16 @@
     <h2>{{ project.name }}</h2>
     <div>
         <img src="{{ project.image }}">
-        {{ project.discription }}
+        <div>
+            <span>{{ project.discription }}</span>
+            <div>
+                <img src="./../../../assets/icons/html.png">
+                <img src="./../../../assets/icons/css.png">
+            </div>
+        </div>
     </div>
     <div>
         <div (click)="goToGit(project.name)" class="btn-primary">
-            <!-- <img src="./../../../assets/icons/git.png"> -->
             <span>Github</span>
         </div>
         <div (click)="goToTest(project.name)" class="btn-secondary">

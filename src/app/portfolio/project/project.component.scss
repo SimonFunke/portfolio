@@ -8,7 +8,7 @@
     border: 1px solid $hover-color;
     border-radius: 20px;
     padding: 16px;
-    
+
     >div:nth-child(2) {
         display: flex;
         gap: 16px;
@@ -16,6 +16,22 @@
         >img {
             width: 200px;
             height: 100%;
+        }
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            >div {
+                display: flex;
+                justify-content: flex-end;
+                gap: 8px;
+
+                >img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
         }
     }
 
@@ -28,6 +44,7 @@
 .btn-primary {
     @include display();
     gap: 16px;
+
     >img {
         filter: none;
     }
