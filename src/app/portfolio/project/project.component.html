@@ -5,8 +5,13 @@
         {{ project.discription }}
     </div>
     <div>
-        <span>Button1</span>
-        <span>Button2</span>
+        <div (click)="goToGit(project.name)" class="btn-primary">
+            <!-- <img src="./../../../assets/icons/git.png"> -->
+            <span>Github</span>
+        </div>
+        <div (click)="goToTest(project.name)" class="btn-secondary">
+            <span>Live Test</span>
+        </div>
     </div>
 
 </div>

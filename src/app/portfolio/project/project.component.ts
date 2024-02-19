@@ -11,8 +11,16 @@ import { Projects } from '../../shared/interfaces/projects';
 })
 export class ProjectComponent {
 
-  @Input () project!: Projects;
+  @Input() project!: Projects;
+
+  goToGit(project: string) {
+    window.open('https://github.com/SimonFunke/' + project, '_blank');
+  }
+
+  goToTest(project: string) {
+    let projectToLowerCase = project.toLocaleLowerCase();
+    window.open('https://simon-funke.developerakademie.net/'+projectToLowerCase, '_blank');
+  }
 
 }
-
 
