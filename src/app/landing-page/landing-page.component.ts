@@ -22,4 +22,8 @@ export class LandingPageComponent {
      },1000)
   }
 
+  goToGit(){
+    window.open('https://github.com/SimonFunke/', '_blank');
+  }
+
 }
