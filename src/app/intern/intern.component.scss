@@ -4,10 +4,19 @@ app-navigation {
     border-bottom: 2px solid white;
 }
 
+.div-footer{
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+    box-sizing: border-box;
+    padding-top: 8px;
+}
+
 .div-outlet {
     padding-top: 64px;
     width: 100%;
     overflow: hidden;
+    flex: 1;
 }
 .main-content {
     background-color: $bg-color;

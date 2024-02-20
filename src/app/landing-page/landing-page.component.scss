@@ -45,6 +45,22 @@
             height: 300px;
         }
     }
+
+    >div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.div-footer {
+    width: 100%;
+    padding-left: 47px;
+    padding-right: 47px;
+    box-sizing: border-box;
+    padding-top: 8px;
 }
 
 .animate-fadeout {
@@ -91,6 +107,8 @@
     gap: 32px;
     padding: 16px;
     border-radius: 50px;
+    width: 186px;
+    height: 41px;
 
     >img:hover {
         cursor: pointer;

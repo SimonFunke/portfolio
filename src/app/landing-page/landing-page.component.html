@@ -5,20 +5,25 @@
                 <img src="./assets/img/foto.png">
                 <div class="div-person">
                     <span>
-                        < I'm Simon Funke >
+                        < I'm Simon Funke>
                     </span>
                     <span>
-                        < Frontend Developer >
+                        < Frontend Developer>
                     </span>
                 </div>
             </div>
             <div (click)="goToAbout()" class="btn-primary">
-                <img  src="./assets/icons/arrow-right.svg">
+                <img src="./assets/icons/arrow-right.svg">
             </div>
-            <div class="div-social">
-                <img (click)="goToGit()" src="./assets/icons/github.png">
-                <img src="./assets/icons/linkedIn.png">
-                <img (click)="goToAbout('contact')" src="./assets/icons/mail.png">
+            <div>
+                <div class="div-social">
+                    <img (click)="goToGit()" src="./assets/icons/github.png">
+                    <img src="./assets/icons/linkedIn.png">
+                    <img (click)="goToAbout('contact')" src="./assets/icons/mail.png">
+                </div>
+                <div class="div-footer">
+                    <app-footer [showImages] ="showImages"></app-footer>
+                </div>
             </div>
         </div>
     </div>
