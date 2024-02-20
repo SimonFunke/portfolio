@@ -38,6 +38,7 @@ app-navigation {
     @include display($jc: flex-start);
     flex-direction: column;
     opacity: 0;
+    overflow-y: hidden;
 }
 
 .animate-grow {
