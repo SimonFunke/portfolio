@@ -36,3 +36,20 @@
     color: $hover-color;
     border-bottom: 2px solid $hover-color;
 }
+
+.nav-mobile{
+    width: 100%;
+    display: none;
+    margin-bottom: 16px;
+}
+
+@media (max-width:775px) {
+    .nav-links{
+        display: none;
+    }
+    .nav-mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

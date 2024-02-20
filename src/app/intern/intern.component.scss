@@ -2,6 +2,7 @@
 
 app-navigation {
     border-bottom: 2px solid white;
+    width: 100%;
 }
 
 .div-footer{
@@ -41,7 +42,7 @@ app-navigation {
     height: 100%;
     background-color: $bg-color-components;
     border-radius: 40px;
-    padding: 16px;
+    padding: 16px 64px;
     box-sizing: border-box;
     font-size: 32px;
     @include display($jc: flex-start);
