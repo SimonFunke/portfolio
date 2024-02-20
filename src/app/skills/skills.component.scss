@@ -1,22 +1,28 @@
 @import './../../styles.scss';
 
-.div-content-main{
-    > div {
-        display: flex;
-        gap: 64px;
-
+.div-content-main {
+    >div {
+        @include display($jc: flex-start);
+        flex-direction: column;
+        overflow-y:auto;
+        overflow-x: hidden;
+        flex: 1;
+        gap: 128px;
         >div {
-            @include display($jc: space-between, $ai: flex-start);
-            flex-wrap: wrap;
-            gap: 32px;
+            display: flex;
+            gap: 64px;
+
+            >div {
+                @include display($jc: space-between, $ai: flex-start);
+                flex-wrap: wrap;
+                gap: 32px;
+            }
         }
     }
 }
 
 .wheel {
     align-self: center;
-    margin-top: 128px;
-    margin-bottom: 64px;
     width: 300px;
     height: 300px;
     border: 5px solid #fff;
@@ -27,59 +33,66 @@
     align-items: center;
     rotate: 0deg;
     animation: rotation 60s infinite linear;
+    box-sizing: border-box;
 
-    >img:nth-child(1){
+    >img:nth-child(1) {
         position: absolute;
-        top: -65px;
+        top: -24%;
     }
 
-    >img:nth-child(2){
+    >img:nth-child(2) {
         position: absolute;
-        top: -17px;
-        left: 247px;
+        top: -9%;
+        left: 81%;
         rotate: 40deg;
     }
 
-    >img:nth-child(3){
+    >img:nth-child(3) {
         position: absolute;
         rotate: 80deg;
-        top: 87px;
-        left: 307px;
+        top: 27%;
+        left: 103%;
     }
-    >img:nth-child(4){
+
+    >img:nth-child(4) {
         position: absolute;
         rotate: 120deg;
-        top: 220px;
-        left: 282px;
+        top: 70%;
+        left: 97%;
     }
-    >img:nth-child(5){
+
+    >img:nth-child(5) {
         position: absolute;
         rotate: 160deg;
-        top: 297px;
-        left: 193px;
+        top: 99%;
+        left: 65%;
     }
-    >img:nth-child(6){
+
+    >img:nth-child(6) {
         position: absolute;
         rotate: 200deg;
-        top: 294px;
-        left: 56px;
+        top: 100%;
+        left: 20%;
     }
-    >img:nth-child(7){
+
+    >img:nth-child(7) {
         position: absolute;
         rotate: 240deg;
-        top: 213px;
-        left: -42px;
+        top: 73%;
+        left: -15%;
     }
-    >img:nth-child(8){
+
+    >img:nth-child(8) {
         position: absolute;
         rotate: 280deg;
-        top: 84px;
-        left: -66px;
+        top: 30%;
+        left: -23%;
     }
-    >img:nth-child(9){
+
+    >img:nth-child(9) {
         position: absolute;
         rotate: 320deg;
-        top: -23px;
+        top: -9%;
         left: 0;
     }
 }
@@ -88,6 +101,7 @@
     0% {
         rotate: 0deg;
     }
+
     100% {
         rotate: 360deg
     }
