@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Projects } from '../../shared/interfaces/projects';
+import { Project } from './../../shared/classes/project';
 import { CommonModule } from '@angular/common';
 
 
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ProjectComponent {
 
-  @Input() project!: Projects;
+  @Input() project!: Project;
 
   goToGit(project: string) {
     window.open('https://github.com/SimonFunke/' + project, '_blank');
@@ -24,7 +24,7 @@ export class ProjectComponent {
   }
 
   getImageSrc(component:string){
-    return `./../../../assets/icons/${component}.png`;
+    return `./assets/icons/${component}.png`;
   }
 
 }

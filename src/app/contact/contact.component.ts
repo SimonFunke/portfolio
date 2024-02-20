@@ -13,7 +13,7 @@ export class ContactComponent {
 
   title = 'Contact Me';
   checked: boolean = false;
-  checkboxImage: string = './../../assets/icons/check_box.svg';
+  checkboxImage: string = './assets/icons/check_box.svg';
   contactData = {
     name: '',
     email: '',
@@ -23,9 +23,9 @@ export class ContactComponent {
   changeCheckboxImage() {
     this.checked = !this.checked;
     if (this.checked) {
-      this.checkboxImage = './../../assets/icons/check_box_checked.svg';
+      this.checkboxImage = './assets/icons/check_box_checked.svg';
     } else {
-      this.checkboxImage = './../../assets/icons/check_box.svg';
+      this.checkboxImage = './assets/icons/check_box.svg';
     }   
   }
 
