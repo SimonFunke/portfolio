@@ -7,10 +7,10 @@
                 <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
                     placeholder="Your name" required>
                 @if(name.invalid && name.touched){
-                <img src="./../../assets/icons/error.png">
+                <img src="./assets/icons/error.png">
                 } 
                 @else if(name.valid && name.touched) {
-                    <img src="./../../assets/icons/ok.png">
+                    <img src="./assets/icons/ok.png">
                 }
             </div>
             @if(name.invalid && name.touched){
@@ -22,10 +22,10 @@
                 <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
                     placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                 @if(email.invalid && email.touched){
-                <img src="./../../assets/icons/error.png">
+                <img src="./assets/icons/error.png">
                 }
                 @else if(email.valid && email.touched) {
-                    <img src="./../../assets/icons/ok.png">
+                    <img src="./assets/icons/ok.png">
                 }
             </div>
             @if(email.invalid && email.touched){
@@ -37,10 +37,10 @@
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
                     placeholder="Your message" required></textarea>
                 @if(message.invalid && message.touched){
-                <img src="./../../assets/icons/error.png">
+                <img src="./assets/icons/error.png">
                 }
                 @else if(message.valid && message.touched) {
-                    <img src="./../../assets/icons/ok.png">
+                    <img src="./assets/icons/ok.png">
                 }
             </div>
             @if(message.invalid && message.touched){
