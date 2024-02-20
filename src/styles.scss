@@ -4,7 +4,7 @@
 }
 
 $bg-color: #0f1932;
-$bg-color-components: rgba(15, 23, 42, 0.9);
+$bg-color-components: rgba(15, 23, 42, 0.85);
 $hover-color: #58D4A0;
 
 
@@ -131,4 +131,25 @@ $hover-color: #58D4A0;
         height: 24px;
     }
 
+}
+
+/* Breite der Scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Du kannst die Breite hier anpassen */
+}
+
+/* Track (Hintergrund) der Scrollbar */
+::-webkit-scrollbar-track {
+    background: transparent; /* Du kannst die Hintergrundfarbe hier anpassen */
+}
+
+/* Griff (Daumen) der Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Du kannst die Farbe des Griffs hier anpassen */
+    border-radius: 5px; /* Du kannst die abgerundeten Ecken des Griffs hier anpassen */
+}
+
+/* Wenn die Maus über die Scrollbar fährt */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Ändere die Farbe bei Hover hier */
 }
