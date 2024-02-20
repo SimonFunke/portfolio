@@ -4,10 +4,11 @@
     >div {
         @include display($jc: flex-start);
         flex-direction: column;
-        overflow-y:auto;
+        overflow-y: auto;
         overflow-x: hidden;
         flex: 1;
         gap: 128px;
+
         >div {
             display: flex;
             gap: 64px;
@@ -21,23 +22,26 @@
     }
 }
 
-.wheel {
-    align-self: center;
-    width: 300px;
-    height: 300px;
-    border: 5px solid #fff;
-    position: relative;
-    border-radius: 50%;
+.wheel-container {
+    overflow: hidden;
+    min-width: 460px;
+    min-height: 460px;
     display: flex;
     justify-content: center;
     align-items: center;
-    rotate: 0deg;
+}
+
+.wheel {
+    min-width: 300px;
+    min-height: 300px;
+    border: 5px solid #fff;
+    border-radius: 50%;
     animation: rotation 60s infinite linear;
-    box-sizing: border-box;
 
     >img:nth-child(1) {
         position: absolute;
-        top: -24%;
+        top: -23%;
+        left: 38%;
     }
 
     >img:nth-child(2) {
@@ -104,5 +108,36 @@
 
     100% {
         rotate: 360deg
+    }
+}
+
+.icon-container {
+    display: none !important;
+    flex-wrap: wrap;
+    gap: 32px !important;
+    > img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 510px) {
+    .wheel-container{
+        display: none !important;
+    }
+    .icon-container{
+        display: flex !important;
+    }
+    .div-content-main{
+        >div{
+            >div {
+                justify-content: center;
+
+                >span {
+                    text-align: center;
+                }
+            }
+            
+        }
     }
 }

@@ -5,11 +5,8 @@ app-navigation {
     width: 100%;
 }
 
-.div-footer{
+.div-footer {
     width: 100%;
-    padding-left: 64px;
-    padding-right: 64px;
-    box-sizing: border-box;
     padding-top: 8px;
 }
 
@@ -19,6 +16,7 @@ app-navigation {
     overflow: hidden;
     flex: 1;
 }
+
 .main-content {
     background-color: $bg-color;
     background-image: url('./../../assets/img/bg-image.png');
@@ -85,5 +83,21 @@ app-navigation {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width:775px) {
+    .main-content-colored-bg {
+        border-radius: 0;
+        padding: 8px;
+    }
+
+    .main-content-container {
+        padding: 8px;
+        border-radius: 0;
+    }
+
+    .div-outlet{
+        padding-top: 8px;
     }
 }

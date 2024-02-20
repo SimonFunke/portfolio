@@ -22,6 +22,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 8px;
             >div {
                 display: flex;
                 justify-content: flex-end;
@@ -47,5 +48,16 @@
 
     >img {
         filter: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .content-project {
+        >div {
+            flex-direction: column;
+        }
+        >div:nth-child(3){
+            gap: 16px;
+        }
     }
 }

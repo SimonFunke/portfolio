@@ -132,6 +132,16 @@ $hover-color: #58D4A0;
 
 }
 
+@media (max-width:775px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    .div-content-main{
+        gap: 64px;
+    }
+}
+
 /* Breite der Scrollbar */
 ::-webkit-scrollbar {
     width: 5px; /* Du kannst die Breite hier anpassen */
