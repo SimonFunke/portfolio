@@ -31,3 +31,8 @@
         }
     }
 }
+
+.active-link {
+    color: $hover-color;
+    border-bottom: 2px solid $hover-color;
+}
