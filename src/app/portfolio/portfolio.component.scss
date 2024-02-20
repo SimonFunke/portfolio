@@ -6,4 +6,37 @@
     gap: 16px;
     overflow-y: auto;
     padding-right: 8px;
+    overflow-x: hidden;
+
+    > app-project:nth-child(odd) {
+        transform: translateX(-100%);
+        animation: slideInLeft 500ms forwards;
+    }
+
+    > app-project:nth-child(even) {
+        transform: translateX(100%);
+        animation: slideInRight 500ms forwards;
+    }
+}
+
+.div-content-main {
+    gap: 64px;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
