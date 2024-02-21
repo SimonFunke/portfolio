@@ -7,6 +7,14 @@
     </div>
     <div class="nav-mobile">
         <span>SF</span>
-        <img src="./assets/icons/burger.png">
+        <img (click)="toggleMenu()" [src]=burgerIconSrc>
     </div>
+
+    <div class="mobile-menu" [ngClass]="{'menu-slideIn': mobileMenu, 'menu-slideOut': !mobileMenu}">
+        <span routerLink="about" (click)="closeMenu()" routerLinkActive="active-link">About Me</span>
+        <span routerLink="skills" (click)="closeMenu()" routerLinkActive="active-link">My Skills</span>
+        <span routerLink="projects" (click)="closeMenu()" routerLinkActive="active-link">My Projects</span>
+        <span routerLink="contact" (click)="closeMenu()" routerLinkActive="active-link">Contact Me</span>
+    </div>
+
 </div>
