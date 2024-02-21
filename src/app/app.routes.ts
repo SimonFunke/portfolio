@@ -6,10 +6,12 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import path from 'path';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
+import { ImpressComponent } from './impress/impress.component';
 
 
 export const routes: Routes = [
     {path : '', component : LandingPageComponent},
+    {path : 'impress', component: ImpressComponent},
     {path : 'intern', component: InternComponent,  children : [
         {path : '', component : AboutComponent},
         {path : 'about', component : AboutComponent},
