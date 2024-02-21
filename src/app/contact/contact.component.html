@@ -52,7 +52,7 @@
             </div>
             <div>
                 <img (click)="changeCheckboxImage()" [src]="checkboxImage">
-                <span>I`ve read the privacy policy and agree to the processing of my data as outlined.</span>
+                <span>I`ve read the <span (click)="openPrivacy()">privacy policy</span> and agree to the processing of my data as outlined.</span>
             </div>
             <input class="btn-submit" [class.btn-submit-enabled]="contactForm.valid && checked" type="submit"
                 value="Send message">
