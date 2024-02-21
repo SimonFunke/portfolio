@@ -2,24 +2,26 @@
     <div class="main-content-colored-bg" [class.animate-shrink]="isActive">
         <div class="main-content-container" [class.animate-fadeout]="isActive">
             <div>
-                <img src="./assets/img/foto.png">
-                <div class="div-person">
-                    <span>
-                        < I'm Simon Funke>
-                    </span>
-                    <span>
-                        < Frontend Developer>
-                    </span>
+                <div>
+                    <img src="./assets/img/foto.png">
+                    <div class="div-person">
+                        <span>
+                            < I'm Simon Funke>
+                        </span>
+                        <span>
+                            < Frontend Developer>
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div (click)="goToAbout()" class="btn-primary">
-                <img src="./assets/icons/arrow-right.svg">
-            </div>
-            <div>
-                <div class="div-social">
-                    <img (click)="goToGit()" src="./assets/icons/github.png">
-                    <img src="./assets/icons/linkedIn.png">
-                    <img (click)="goToAbout('contact')" src="./assets/icons/mail.png">
+                <div (click)="goToAbout()" class="btn-primary">
+                    <img src="./assets/icons/arrow-right.svg">
+                </div>
+                <div>
+                    <div class="div-social">
+                        <img (click)="goToGit()" src="./assets/icons/github.png">
+                        <img src="./assets/icons/linkedIn.png">
+                        <img (click)="goToAbout('contact')" src="./assets/icons/mail.png">
+                    </div>
                 </div>
             </div>
             <div class="div-footer">

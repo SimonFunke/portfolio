@@ -39,21 +39,22 @@
 
     >div:nth-child(1) {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-
-        >img {
-            height: 300px;
-        }
-    }
-
-    >div:nth-child(3) {
-        display: flex;
+        flex: 1;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        gap: 16px;
+
+        >div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+
+            >img {
+                height: 300px;
+            }
+        }
     }
 }
 
@@ -131,24 +132,27 @@
         padding: 8px;
     }
 
-    .main-content-container{
+    .main-content-container {
         border-radius: 0;
         justify-content: center;
         gap: 32px;
         font-size: 26px;
         padding: 8px;
     }
+
     .div-person {
         >span:nth-child(1) {
             font-size: 34px;
         }
     }
-    .div-social{
+
+    .div-social {
         >img {
             width: 32px;
             height: 32px;
         }
     }
+
     .div-footer {
         padding: 0;
     }
