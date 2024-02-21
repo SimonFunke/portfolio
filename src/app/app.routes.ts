@@ -7,11 +7,13 @@ import path from 'path';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImpressComponent } from './impress/impress.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 
 export const routes: Routes = [
     {path : '', component : LandingPageComponent},
     {path : 'impress', component: ImpressComponent},
+    {path: 'privacy', component: PrivacyComponent},
     {path : 'intern', component: InternComponent,  children : [
         {path : '', component : AboutComponent},
         {path : 'about', component : AboutComponent},
