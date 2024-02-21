@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -20,6 +21,8 @@ export class ContactComponent {
     message: '',
   };
 
+  constructor(private router:Router) { }
+
   changeCheckboxImage() {
     this.checked = !this.checked;
     if (this.checked) {
@@ -35,5 +38,8 @@ export class ContactComponent {
     }    
   }
 
+  openPrivacy(){
+    this.router.navigate(['privacy']);
+  }
 
 }
