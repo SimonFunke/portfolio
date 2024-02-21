@@ -23,4 +23,8 @@ export class FooterComponent {
     window.open('https://github.com/SimonFunke/', '_blank');
   }
 
+  goToImpress(){
+    this.router.navigate(['impress']);
+  }
+
 }
