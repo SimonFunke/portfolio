@@ -14,6 +14,7 @@ export class ContactComponent {
 
   title = 'Contact Me';
   checked: boolean = false;
+  sendMessageBox: boolean = false;
   sendMessage: boolean = false;
   checkboxImage: string = './assets/icons/check_box.svg';
   contactData = {
@@ -38,6 +39,7 @@ export class ContactComponent {
       ngForm.resetForm();
       this.changeCheckboxImage();
       this.sendMessage = true;
+      this.sendMessageBox = true;
       setTimeout(() => {
         this.sendMessage = false;
       }, 2000);

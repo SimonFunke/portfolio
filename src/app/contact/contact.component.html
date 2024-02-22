@@ -59,6 +59,6 @@
         </form>
     </div>
 </div>
-<div [ngClass]="{'message-sent-slideIn': sendMessage, 'message-sent-slideOut': !sendMessage}" class="mesage-sent">
+<div *ngIf="sendMessageBox" [ngClass]="{'message-sent-slideIn': sendMessage, 'message-sent-slideOut': !sendMessage}" class="mesage-sent">
     Message sent
 </div>
