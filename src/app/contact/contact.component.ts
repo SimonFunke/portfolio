@@ -35,7 +35,8 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm){
     if(ngForm.valid && ngForm.submitted && this.checked) {
-      console.log(this.contactData);
+      ngForm.resetForm();
+      this.changeCheckboxImage();
       this.sendMessage = true;
       setTimeout(() => {
         this.sendMessage = false;
@@ -46,5 +47,4 @@ export class ContactComponent {
   openPrivacy(){
     this.router.navigate(['privacy']);
   }
-
 }
