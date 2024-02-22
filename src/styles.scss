@@ -133,7 +133,7 @@ $color-link-pribtn : #113F24;
 
 }
 
-@media (max-width:775px) {
+@media (max-width:775px) or (max-height: 775px) {
     h1 {
         font-size: 38px;
     }

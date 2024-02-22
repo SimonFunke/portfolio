@@ -87,7 +87,8 @@ app-navigation {
     }
 }
 
-@media (max-width:775px) {
+@media (max-width:775px) or (max-height: 775px) {
+    
     .main-content-colored-bg {
         border-radius: 0;
         padding: 8px;
