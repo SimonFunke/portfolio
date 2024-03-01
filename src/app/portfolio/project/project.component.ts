@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Project } from './../../shared/classes/project';
 import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../shared/services/language.service';
 
 
 @Component({
@@ -13,6 +14,9 @@ import { CommonModule } from '@angular/common';
 export class ProjectComponent {
 
   @Input() project!: Project;
+  @Input() i!: number;
+
+  constructor(public languageService: LanguageService) { }
 
   goToGit(project: string) {
     window.open('https://github.com/SimonFunke/' + project, '_blank');

@@ -2,6 +2,6 @@
     <h1>{{ title }}</h1>
 
     <div class="project-container">
-        <app-project *ngFor="let project of projects" [project]="project"></app-project>
+        <app-project *ngFor="let project of projects; let i = index" [i]="i" [project]="project"></app-project>
     </div>
 </div>

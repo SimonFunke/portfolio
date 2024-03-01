@@ -1,9 +1,15 @@
 <div class="main-content-container-navigation">
     <div class="nav-links">
-        <span routerLink="about" routerLinkActive="active-link">About Me</span>
-        <span routerLink="skills" routerLinkActive="active-link">My Skills</span>
-        <span routerLink="projects" routerLinkActive="active-link">My Projects</span>
-        <span routerLink="contact" routerLinkActive="active-link">Contact Me</span>
+        <div>
+            <span routerLink="about" routerLinkActive="active-link">About Me</span>
+            <span routerLink="skills" routerLinkActive="active-link">My Skills</span>
+            <span routerLink="projects" routerLinkActive="active-link">My Projects</span>
+            <span routerLink="contact" routerLinkActive="active-link">Contact Me</span>
+        </div>
+        <div>
+            <img (click)="changeLanguage('de')" src="./assets/icons/german.png">
+            <img (click)="changeLanguage('en')" src="./assets/icons/english.png">
+        </div>
     </div>
     <div class="nav-mobile">
         <span>SF</span>
@@ -15,6 +21,10 @@
         <span routerLink="skills" (click)="closeMenu()" routerLinkActive="active-link">My Skills</span>
         <span routerLink="projects" (click)="closeMenu()" routerLinkActive="active-link">My Projects</span>
         <span routerLink="contact" (click)="closeMenu()" routerLinkActive="active-link">Contact Me</span>
+        <div>
+            <img (click)="changeLanguage('de')" src="./assets/icons/german.png">
+            <img (click)="changeLanguage('en')" src="./assets/icons/english.png">
+        </div>
     </div>
 
 </div>

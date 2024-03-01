@@ -3,7 +3,7 @@
     <div>
         <img src="{{ project.image }}">
         <div>
-            <span>{{ project.discription }}</span>
+            <span>{{languageService.projectDescription[i] }}</span>
             <div>
                 <img *ngFor="let component of project.components" [src]="getImageSrc(component)">
             </div>

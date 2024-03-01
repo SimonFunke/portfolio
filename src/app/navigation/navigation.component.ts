@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { LanguageService } from '../shared/services/language.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class NavigationComponent {
 
   mobileMenu: boolean = false;
   burgerIconSrc: string = './assets/icons/burger.png';
-  constructor() { }
+  constructor(private languageService: LanguageService) { }
 
   toggleMenu(){
     this.mobileMenu = !this.mobileMenu;
@@ -28,6 +29,10 @@ export class NavigationComponent {
   closeMenu(){
     this.mobileMenu = false;
     this.burgerIconSrc = './assets/icons/burger.png';
+  }
+
+  changeLanguage(lang: string){
+    this.languageService.changeLanguage(lang);
   }
 
 }

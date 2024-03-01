@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
 import { Project } from '../shared/classes/project';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -15,11 +16,9 @@ export class PortfolioComponent {
   title = 'My Projects';
   projects: Project[] = [];
 
-  constructor() {
-    this.projects.push( new Project('El-Pollo-Loco', 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.', './assets/img/el-pollo-loco.png', ['html', 'css', 'js']) );
-    this.projects.push( new Project('Join', 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.', './assets/img/join.png', ['html', 'css', 'js']) );
-    this.projects.push( new Project('El-Pollo-Loco', 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.', './assets/img/el-pollo-loco.png', ['html', 'css', 'js']) );   
-    this.projects.push( new Project('Join', 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.', './assets/img/join.png', ['html', 'css', 'js']) );
+  constructor(public languageService: LanguageService) {
+    this.projects.push( new Project('El-Pollo-Loco', 'elPolloLoco' ,'./assets/img/el-pollo-loco.png', ['html', 'css', 'js']) );
+    this.projects.push( new Project('Join', 'join' ,'./assets/img/join.png', ['html', 'css', 'js']) );
   }
 
 }

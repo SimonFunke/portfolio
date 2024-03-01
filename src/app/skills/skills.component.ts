@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-skills',
@@ -10,5 +11,9 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
 
   title = 'My Skills';
+
+  constructor(public languageService: LanguageService) {
+    
+  }
 
 }
