@@ -7,11 +7,11 @@
         overflow-y: auto;
         overflow-x: hidden;
         flex: 1;
-        gap: 128px;
+        gap: 16px;
 
         >div {
             display: flex;
-            gap: 64px;
+            gap: 32px;
 
             >div {
                 @include display($jc: space-between, $ai: flex-start);
@@ -29,6 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .wheel {
@@ -130,6 +131,7 @@
     }
     .div-content-main{
         >div{
+            gap: 96px;
             >div {
                 justify-content: center;
 

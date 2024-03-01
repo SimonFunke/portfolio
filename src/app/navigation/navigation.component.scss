@@ -2,8 +2,77 @@
 
 .nav-links {
     @include display();
-    gap: 32px;
+    position: relative;
     margin-bottom: 16px;
+
+    >div:nth-child(1) {
+        display: flex;
+        gap: 32px;
+        >span {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: -2px; // Positionieren Sie die Linie unter dem Text
+                width: 0%; // Startbreite der Linie (unsichtbar)
+                height: 2px;
+                background-color: $hover-color;
+                transition: 200ms ease; // Übergangseffekt für die Breite
+            }
+
+            &:hover::after {
+                width: 100%;
+                left: 0;
+
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $hover-color;
+            }
+        }
+    }
+    >div:nth-child(2){
+        display: flex;
+        position: absolute;
+        right: 0;
+        gap: 8px;
+        >img {
+            width: 28px;
+            height: 28px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.active-link {
+    color: $hover-color;
+    border-bottom: 2px solid $hover-color;
+}
+
+.nav-mobile {
+    width: 100%;
+    display: none;
+    margin-bottom: 16px;
+    margin-top: 8px;
+}
+
+.mobile-menu {
+    @include display($jc: flex-start);
+    flex-direction: column;
+    position: absolute;
+    top: 89px;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    padding-top: 128px;
+    gap: 64px;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    z-index: 1;
 
     >span {
         position: relative;
@@ -30,55 +99,11 @@
             color: $hover-color;
         }
     }
-}
-
-.active-link {
-    color: $hover-color;
-    border-bottom: 2px solid $hover-color;
-}
-
-.nav-mobile{
-    width: 100%;
-    display: none;
-    margin-bottom: 16px;
-    margin-top: 8px;
-}
-
-.mobile-menu{
-    @include display($jc: flex-start);
-    flex-direction: column;
-    position: absolute;
-    top: 74px;
-    bottom: 56px;
-    left: 8px;
-    right: 8px;
-    padding-top: 128px;
-    gap: 64px;
-    background-color: rgba($color: #000000, $alpha: 0.9);
-    z-index: 1;
-    >span {
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -2px; // Positionieren Sie die Linie unter dem Text
-            width: 0%; // Startbreite der Linie (unsichtbar)
-            height: 2px;
-            background-color: $hover-color;
-            transition: 200ms ease; // Übergangseffekt für die Breite
-        }
-
-        &:hover::after {
-            width: 100%;
-            left: 0;
-
-        }
-
-        &:hover {
+    >div {
+        display: flex;
+        gap: 16px;
+        >img:hover {
             cursor: pointer;
-            color: $hover-color;
         }
     }
 }
@@ -95,6 +120,7 @@
     0% {
         transform: translateX(102%);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -104,20 +130,23 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(102%);
         display: none;
     }
 }
 
-@media (max-width:775px) {
-    .nav-links{
+@media (max-width:925px) {
+    .nav-links {
         display: none;
     }
-    .nav-mobile{
+
+    .nav-mobile {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         >img:hover {
             cursor: pointer;
         }

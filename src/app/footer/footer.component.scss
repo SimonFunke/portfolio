@@ -5,7 +5,7 @@
     font-size: 20px;
     box-sizing: border-box;
 
-    >span:nth-child(1){
+    >span:nth-child(1) {
         position: relative;
 
         &::after {
@@ -42,6 +42,21 @@
             &:hover {
                 cursor: pointer;
                 transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@media (max-width:775px) or (max-height: 775px) {
+    .content-footer {
+        >span:nth-child(2) {
+            font-size: 12px;
+        }
+
+        >div {
+            img {
+                width: 24px;
+                height: 24px;
             }
         }
     }
