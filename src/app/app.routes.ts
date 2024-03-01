@@ -3,7 +3,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { InternComponent } from './intern/intern.component';
 import { AboutComponent } from './about/about.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import path from 'path';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { ImpressComponent } from './impress/impress.component';
