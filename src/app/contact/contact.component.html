@@ -6,7 +6,8 @@
                 <div class="div-input-field"
                     [ngClass]="{'error-border': name.invalid && name.touched, 'valid-border': name.valid}">
                     <input #name="ngModel" [(ngModel)]="contactData.name" id="name" name="name" type="text"
-                        placeholder="Your name" required>
+                        placeholder="Your name" required
+                        autocomplete="off">
                     @if(name.invalid && name.touched){
                     <img src="./assets/icons/error.png">
                     }
@@ -22,7 +23,8 @@
                 <div class="div-input-field"
                     [ngClass]="{'error-border': email.invalid && email.touched, 'valid-border': email.valid}">
                     <input #email="ngModel" [(ngModel)]="contactData.email" id="email" name="email" type="email"
-                        placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                        placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                        autocomplete="off">
                     @if(email.invalid && email.touched){
                     <img src="./assets/icons/error.png">
                     }
