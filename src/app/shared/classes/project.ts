@@ -1,13 +1,15 @@
+import { LanguageService } from '../services/language.service';
+
 export class Project {
-    name: string;
-    discription: string;
+    name: string;  
     image: string;
     components: string[];
+    langName: string;
 
-    constructor(name: string, discription: string, image: string, components: string[]) {
+    constructor(name: string, langName: string, image: string, components: string[]) {
         this.name = name;
-        this.discription = discription;
         this.image = image;
         this.components = components;
+        this.langName = langName;
     }
 }
